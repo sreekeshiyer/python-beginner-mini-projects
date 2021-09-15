@@ -1,2 +1,1 @@
-# python-beginner-mini-projects
-Small projects for python beginners. 
+# Python Mini Projects For Beginners
