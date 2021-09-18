@@ -16,7 +16,7 @@ for _ in range(len(chosen_word)):
 while not end_of_game:
     
     guess = input("Guess a letter: ").lower()
-    os.system('clear');
+    os.system('clear')
     # clear()
     if guess in display:
       print(f"You've already guessed {guess}")
