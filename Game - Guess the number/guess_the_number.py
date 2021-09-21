@@ -10,9 +10,10 @@ elif difficulty =='hard': no_of_attempts = 5
 else: print('Invalid Input')
 
 comp_guessed_number = random.randint(1,100)
-print(f"You have {no_of_attempts} attempts remaining to guess the number.")
+
 
 if difficulty == 'easy' or difficulty == 'hard':
+  print(f"You have {no_of_attempts} attempts remaining to guess the number.")
   while no_of_attempts and no_of_attempts > 0:
     user_guess = int(input("\nMake a guess: "))
 
