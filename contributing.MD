@@ -17,6 +17,7 @@ The idea is simple, it is to have people who are very new to Python get a good i
 
 - The project has to be simple, I'm not expecting a script that'll break the NASA data centers. 
 - Try to use simple language, I know *Python enthusiasts* (myself included) fancy their opportunities to get everything done in one line, but this repository is meant to be beginner friendly.
+- If you're making use of third-party modules (very likely), please maintain a `requirements.txt` file. 
 - Please use comments wherever possible. If you think even a small bit of code requires explanation, please add comments. Think like you're just starting out with Python and have absolutely no idea how things work.
 - Please refrain from dropping your credentials and API keys. Make use of `config` files, specify with comments that one would require an API key or a Secret key from a certain service. 
 
