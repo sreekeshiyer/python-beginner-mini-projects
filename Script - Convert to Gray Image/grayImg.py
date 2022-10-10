@@ -1,16 +1,20 @@
 import cv2
 import os
+import tkinter as tk
+from tkinter import filedialog
 
-loc = input("Enter the complete image location: ")            # enter image location here
-file = input("Enter the image file name (e.g., Test.jpeg): ") # enter file name for image
+root = tk.Tk()
+root.withdraw()
+file_path = filedialog.askopenfilename(title = "Select image to start with")         # Choose image
 
-path = os.path.join(loc, file)
-img=cv2.imread(path)    # reads image
-new_path = input("Do you want to save image in same path? (Y/n) ").lower()
+file = file_path.split("/")[-1]
+print(file)
+img = cv2.imread(file_path)                             # reads image
+grayImg = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)         # recoloring image to gray
 
-if new_path=="n":
-    loc = input("Enter new path to save image: ")        # saving path to store at desired location
-print(f"Saving image at {loc}")
+folder_selected = filedialog.askdirectory(title = "Select directory to save image")  # Select directory to store gray image
 
-grayImg=cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)            # recoloring image to gray
-cv2.imwrite(os.path.join(loc, f"gray-{file}"), grayImg)  # saving gray image
+image_name = os.path.join(folder_selected, f"gray-{file}")
+print(f"Saving image at {folder_selected} as gray-{file}")
+
+cv2.imwrite(image_name, grayImg)                        # saving gray image
