@@ -1,0 +1,39 @@
+# Pycharm files
+.idea/
+.ropeproject/
+venv/
+
+# Vscode files
+.vscode/
+
+# Zip files
+*.zip
+
+# Compiled python files
+*/__pycache__
+*.pyc
+
+# Distribution files
+*.egg-info
+*.spec
+build/
+dist/
+
+# Other
+pygame_menu/examples/other/_test**
+pygame_menu/examples/other/sources/**
+run_gource.bat
+
+# Tox
+tox.ini
+
+# Pyproject
+pyproject_update.py
+pyproject.toml
+
+# Lock file
+*.lock
+
+# MacOS files
+.DS_Store
+**._*
